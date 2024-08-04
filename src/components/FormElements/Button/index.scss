@@ -1,0 +1,47 @@
+.button-wrapper {
+  .edit {
+    padding: 8px 24px;
+    background-color: #2489ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      color: red;
+      transition: 1s;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+  .cancel {
+    padding: 8px 24px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      color: blue;
+      transition: 1s;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+  .save {
+    padding: 8px 24px;
+    background-color: #2489ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      color: blue;
+      transition: 1s;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+}
