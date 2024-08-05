@@ -1,34 +1,41 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js", // Your entry point file
+  entry: "./src/index.tsx", // Ensure this points to your TypeScript entry file
   output: {
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"), // Output directory
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"], // Include TypeScript extensions
   },
   module: {
     rules: [
       {
-        test: /\.scss$/i,
+        test: /\.(ts|tsx)$/, // Test for .ts and .tsx files
+        exclude: /node_modules/,
+        use: "ts-loader", // Use ts-loader to handle TypeScript files
+      },
+      {
+        test: /\.(js|jsx)$/, // Test for .js and .jsx files
+        exclude: /node_modules/,
+        use: "babel-loader", // Use babel-loader for JS/JSX files (if needed)
+      },
+      {
+        test: /\.css$/, // Rule for CSS files
         use: [
           "style-loader", // Injects styles into DOM
-          "css-loader", // Turns CSS into CommonJS
-          "sass-loader", // Compiles Sass to CSS
+          "css-loader", // Translates CSS into CommonJS modules
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.scss$/, // Rule for SCSS files
         use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-            },
-          },
+          "style-loader", // Injects styles into DOM
+          "css-loader", // Translates CSS into CommonJS modules
+          "sass-loader", // Compiles Sass to CSS
         ],
       },
-      // Additional rules can go here (e.g., for JavaScript, images, etc.)
     ],
   },
-  // Additional configurations such as plugins, mode, etc., can be added here
 };
