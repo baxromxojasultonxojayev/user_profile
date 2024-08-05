@@ -1,6 +1,8 @@
 const path = require("path");
 
 module.exports = {
+  mode: "production",
+
   entry: "./src/index.tsx", // Ensure this points to your TypeScript entry file
   output: {
     path: path.resolve(__dirname, "dist"),
