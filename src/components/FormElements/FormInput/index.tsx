@@ -12,8 +12,11 @@ const FormInput: FC<Props> = ({
 }) => {
   return (
     <div className="input-wrapper">
-      <label className="label">{label}</label>
+      <label className="label" htmlFor={name}>
+        {label}
+      </label>
       <input
+        id={name}
         name={name}
         className="input"
         type={type}

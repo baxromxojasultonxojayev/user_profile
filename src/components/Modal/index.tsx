@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import "./index.scss";
-import AvatarPhoto from "../AvatarPhoto";
+import UserPhoto from "../UserPhoto";
 import Button from "../FormElements/Button";
-import FormInput from "../FormElements/FromInput";
+import FormInput from "../FormElements/FormInput";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 interface FormData {
@@ -209,7 +209,7 @@ const Modal: FC<Props> = ({ userData, isOpen, onClose }) => {
     <div className={`modal-overlay ${isOpen ? "show" : ""}`}>
       <div className={`modal-content ${isOpen ? "show" : ""}`}>
         <div className="header-profile">
-          <AvatarPhoto isModalOpen={isOpen} />
+          <UserPhoto isModalOpen={isOpen} />
           <div className="user-name">
             <p className="name">{data?.name}</p>
             <p className="email">{data?.email}</p>

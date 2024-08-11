@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.scss";
 import Button from "../../components/FormElements/Button";
-import AvatarPhoto from "../../components/AvatarPhoto";
+import UserPhoto from "../../components/UserPhoto";
 import Modal from "../../components/Modal";
 import { useQuery } from "@tanstack/react-query";
 
@@ -43,7 +43,7 @@ const UserProfile = () => {
       {!isLoading ? (
         <div className="container">
           <div className="header-profile">
-            <AvatarPhoto isModalOpen={isModalOpen} />
+            <UserPhoto isModalOpen={isModalOpen} />
             <div className="user-name">
               <p className="name">{data?.name}</p>
               <p className="email">{data?.email}</p>

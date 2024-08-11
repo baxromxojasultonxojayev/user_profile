@@ -1,6 +1,8 @@
 // AvatarPhoto.test.tsx
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 import AvatarPhoto from ".."; // Adjust the path as needed
 
 // Mock localStorage

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component clicking cancel button 1`] = `
+<div>
+  <div
+    class="button-wrapper"
+  >
+    <button
+      class="cancel"
+      type="text"
+    >
+      Bekor qilish
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Button Component clicking edit button 1`] = `
+<div>
+  <div
+    class="button-wrapper"
+  >
+    <button
+      class="edit"
+      type="text"
+    >
+      O'zgartirish
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Button Component clicking save button 1`] = `
+<div>
+  <div
+    class="button-wrapper"
+  >
+    <button
+      class="save"
+      type="text"
+    >
+      Saqlash
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Button Component matches snapshot without props 1`] = `
+<div>
+  <div
+    class="button-wrapper"
+  >
+    <button
+      class="save"
+      type="text"
+    >
+      Saqlash
+    </button>
+  </div>
+</div>
+`;
