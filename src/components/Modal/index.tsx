@@ -63,7 +63,7 @@ const Modal: FC<Props> = ({ userData, isOpen, onClose }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setFormData((prevData: any) => ({
       ...prevData,
       [name]: value,
     }));
@@ -108,7 +108,7 @@ const Modal: FC<Props> = ({ userData, isOpen, onClose }) => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["rates"] });
     },
-    onError: (error) => {
+    onError: (error: any) => {
       console.error("Update failed:", error);
     },
   });
