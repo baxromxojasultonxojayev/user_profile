@@ -1,0 +1,19 @@
+.navbar {
+  .menu-list {
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+
+    .menu-item {
+      display: contents;
+      a {
+        color: black;
+        text-decoration: none;
+        &:hover {
+          color: red;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}

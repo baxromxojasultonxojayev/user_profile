@@ -11,11 +11,7 @@ const Button: FC<Props> = ({ mode, type, onClick }) => {
           mode === "edit" ? "edit" : mode === "cancel" ? "cancel" : "save"
         }
       >
-        {mode === "edit"
-          ? "O'zgartirish"
-          : mode === "cancel"
-          ? "Bekor qilish"
-          : "Saqlash"}
+        {mode === "edit" ? "Edit" : mode === "cancel" ? "Cancel" : "Save"}
       </button>
     </div>
   );
